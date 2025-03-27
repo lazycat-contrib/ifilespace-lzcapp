@@ -1,0 +1,48 @@
+{
+  "name": "iFileSpace",
+  "package": "cloud.lazycat.app.ifilespace",
+  "description": "简洁的文件管理工具，快速搭建专属的私人网盘系统",
+  "homepage": "https://ifile.space",
+  "author": "ifile",
+  "app_features": [
+    "background_task",
+    "public_path"
+  ],
+  "subdomain": "ifilespace",
+  "version": "2.5.9",
+  "public_paths": [
+    "/"
+  ],
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yaml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "ifile_3030_3030": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_docker.hlmirror.com_lgs821_ifile": {
+    "originalImage": "docker.hlmirror.com/lgs821/ifile",
+    "pushTarget": "none"
+  },
+  "ifile_volume_/ifile/conf_action": "emptyDir",
+  "ifile_volume_/ifile/conf_location": "app_data",
+  "ifile_volume_/ifile/files_action": "emptyDir",
+  "ifile_volume_/ifile/files_location": "app_data",
+  "ifile_volume_/ifile/data_action": "emptyDir",
+  "ifile_volume_/ifile/data_location": "app_data",
+  "ifile_volume_/ifile/assets_action": "emptyDir",
+  "ifile_volume_/ifile/assets_location": "app_data",
+  "ifile_volume_/ifile/tmp_action": "emptyDir",
+  "ifile_volume_/ifile/tmp_location": "app_data",
+  "ifile_volume_/ifile/thumb_action": "emptyDir",
+  "ifile_volume_/ifile/thumb_location": "app_data",
+  "ifile_volume_/ifile/logs_action": "emptyDir",
+  "ifile_volume_/ifile/logs_location": "app_data",
+  "ifile_volume_/ifile/library_action": "emptyDir",
+  "ifile_volume_/ifile/library_location": "app_data"
+}

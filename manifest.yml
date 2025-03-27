@@ -1,0 +1,30 @@
+lzc-sdk-version: "0.1"
+name: iFileSpace
+package: cloud.lazycat.app.ifilespace
+version: 2.5.9
+description: 简洁的文件管理工具，快速搭建专属的私人网盘系统
+homepage: https://ifile.space
+author: lgs821
+application:
+  subdomain: ifilespace
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=http://ifile:3030/
+services:
+  ifile:
+    image: docker.hlmirror.com/lgs821/ifile
+    binds:
+      - /lzcapp/var/conf:/ifile/conf
+      - /lzcapp/var/files:/ifile/files
+      - /lzcapp/var/data:/ifile/data
+      - /lzcapp/var/assets:/ifile/assets
+      - /lzcapp/var/tmp:/ifile/tmp
+      - /lzcapp/var/thumb:/ifile/thumb
+      - /lzcapp/var/logs:/ifile/logs
+      - /lzcapp/var/library:/ifile/library
