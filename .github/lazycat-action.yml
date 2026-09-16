@@ -1,0 +1,40 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-build/ifilespace.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: ifile
+
+build:
+  run_buildscript: false
+
+images:
+  - id: ifile
+    target: service
+    service: ifile
+    source: lgs821/ifile
+    channel: stable
+    sort: semver
+    tag_regex: '^v?\d+\.\d+\.\d+$'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    changelog_locales: [zh, en]
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: iFileSpace
+    summary: "简洁的文件管理工具，快速搭建专属的私人网盘系统"

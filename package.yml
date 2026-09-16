@@ -1,0 +1,14 @@
+package: cloud.lazycat.app.ifilespace
+version: 2.5.9
+name: iFileSpace
+description: "简洁的文件管理工具，快速搭建专属的私人网盘系统"
+min_os_version: "1.5.0"
+homepage: https://ifile.space
+author: lgs821
+locales:
+  zh:
+    name: iFileSpace
+    description: "简洁的文件管理工具，快速搭建专属的私人网盘系统"
+  en:
+    name: iFileSpace
+    description: "A simple file management tool for quickly setting up your own private cloud drive"
