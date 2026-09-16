@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.ifilespace
-version: 2.5.9
+version: 2.6.1
 name: iFileSpace
 description: "简洁的文件管理工具，快速搭建专属的私人网盘系统"
 min_os_version: "1.5.0"

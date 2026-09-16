@@ -9,8 +9,8 @@ application:
       backend: http://ifile:3030/
 services:
   ifile:
-    # upstream: lgs821/ifile:2.5.9
-    image: lgs821/ifile:2.5.9
+    # upstream: lgs821/ifile:2.6.1
+    image: registry.lazycat.cloud/czyt/lgs821/ifile:3876ccb79c2ef07d
     binds:
       - /lzcapp/var/conf:/ifile/conf
       - /lzcapp/var/files:/ifile/files
